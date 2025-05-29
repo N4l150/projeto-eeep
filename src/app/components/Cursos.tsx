@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Cursos() {
   const cursos = [
     {
-      id: "administracao",
+      id: "adm",
       nome: "Administração",
       icone: <Briefcase size={72} className="text-blue-800 mx-auto" />,
     },
@@ -15,12 +15,12 @@ export default function Cursos() {
       icone: <Code size={72} className="text-purple-800 mx-auto" />,
     },
     {
-      id: "edificações",
+      id: "edf",
       nome: "Edificações",
       icone: <Building size={72} className="text-yellow-800 mx-auto" />,
     },
     {
-      id: "massoterapia",
+      id: "masso",
       nome: "Massoterapia",
       icone: <HeartPulse size={72} className="text-pink-500 mx-auto" />,
     }
