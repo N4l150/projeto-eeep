@@ -10,7 +10,7 @@ export default function Cursos() {
       icone: <Briefcase size={72} className="text-blue-800 mx-auto" />,
     },
     {
-      id: "Desenvolvimento de Sistemas",
+      id: "dds",
       nome: "Desenvolvimento de Sistemas",
       icone: <Code size={72} className="text-purple-800 mx-auto" />,
     },
