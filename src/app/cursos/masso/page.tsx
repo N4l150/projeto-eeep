@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
 
       <section className="bg-white py-12 text-center max-w-5xl mx-auto">
-        <h1 className="text-5xl font-extrabold text-green-900">DDS</h1>
+        <h1 className="text-5xl font-extrabold text-green-900">Massoterapia</h1>
       </section>
 
       <main className="flex flex-col md:flex-row items-center justify-center min-h-[80vh] px-6 py-16 bg-green-100 gap-10">
@@ -62,7 +62,7 @@ export default function Home() {
       </section>
 
       <section className="bg-green-50 py-16 px-6 max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-green-800 mb-8 text-center">Grade Curricular do Curso</h2>
+        <h2 className="text-4xl font-bold text-green-800 mb-8 text-center">Grade Curso</h2>
         <table className="w-full border border-green-300 rounded-md overflow-hidden">
           <thead className="bg-green-200">
             <tr>
@@ -73,18 +73,18 @@ export default function Home() {
           </thead>
           <tbody>
             <tr className="even:bg-green-100">
-              <td className="border border-green-300 py-2 px-4">Introdução ao DDS</td>
-              <td className="border border-green-300 py-2 px-4">40h</td>
-              <td className="border border-green-300 py-2 px-4">Conceitos básicos e objetivos do curso.</td>
+              <td className="border border-green-300 py-2 px-4">Introdução ao curso</td>
+              <td className="border border-green-300 py-2 px-4">100h</td>
+              <td className="border border-green-300 py-2 px-4">Conceitos básicos.</td>
             </tr>
             <tr>
               <td className="border border-green-300 py-2 px-4">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
-              <td className="border border-green-300 py-2 px-4">60h</td>
+              <td className="border border-green-300 py-2 px-4">100h</td>
               <td className="border border-green-300 py-2 px-4">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.</td>
             </tr>
             <tr className="even:bg-green-100">
               <td className="border border-green-300 py-2 px-4">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
-              <td className="border border-green-300 py-2 px-4">80h</td>
+              <td className="border border-green-300 py-2 px-4">100h</td>
               <td className="border border-green-300 py-2 px-4">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
             </tr>
             <tr>
