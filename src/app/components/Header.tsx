@@ -43,6 +43,8 @@ export default function Header() {
             <a href="#" className="hover:underline hover:underline-offset-4">Equipe</a>
             <a href="#" className="hover:underline hover:underline-offset-4">Quem somos</a>
             <a href="#" className="hover:underline hover:underline-offset-4">Contato</a>
+             <a href="#" className="hover:underline hover:underline-offset-4">Cnpj:</a>
+
           </nav>
         )}
       </div>
