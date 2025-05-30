@@ -38,10 +38,10 @@ export default function Header() {
 
         {menuAberto && (
           <nav className="flex flex-wrap gap-5 text-base mt-4 sm:mt-0">
-            <a href="#" className="hover:underline hover:underline-offset-4">Perguntas frequentes</a>
+            <a href="#" className="hover:underline hover:underline-offset-4"> F&Q</a>
             <a href="#" className="hover:underline hover:underline-offset-4">Cursos</a>
             <a href="#" className="hover:underline hover:underline-offset-4">Equipe</a>
-            <a href="#" className="hover:underline hover:underline-offset-4">História</a>
+            <a href="#" className="hover:underline hover:underline-offset-4">Quem somos</a>
             <a href="#" className="hover:underline hover:underline-offset-4">Contato</a>
           </nav>
         )}

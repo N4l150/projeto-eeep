@@ -6,11 +6,13 @@ import Cursos from "./components/Cursos";
 import Aprovacoes from "./components/Aprovacoes";
 import Espaços from "./components/Conheca"; 
 import Noticias from "./components/Noticias";
+import Slidao from "./components/Slidao";
 
 export default function Home() {
   return (
     <>
         <Header/>
+        <Slidao/>
         <Cursos/>
         <Espaços/>
         <Aprovacoes/>
