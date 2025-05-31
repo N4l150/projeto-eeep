@@ -58,7 +58,7 @@ export default function Carrossel() {
   return (
     <>
       <div className="w-full bg-green-800 text-white py-12 px-4">
-        <h1 className="text-4xl font-extrabold text-center mb-8 tracking-tight">
+        <h1 className="text-4xl font-bold text-center mb-8 tracking-tight font-montserrat">
           Aprovações em Faculdades
         </h1>
 

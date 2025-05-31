@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
 
       <section className="bg-white py-12 text-center max-w-5xl mx-auto">
-        <h1 className="text-5xl font-extrabold text-green-900">Edificações</h1>
+        <h1 className="text-5xl font-bold text-green-900 font-montserrat">Edificações</h1>
       </section>
 
       <main className="flex flex-col md:flex-row items-center justify-center min-h-[80vh] px-6 py-16 bg-green-100 gap-10">
@@ -26,7 +26,7 @@ export default function Home() {
         <div className="hidden md:block w-1 h-full bg-orange-400 rounded-full animate-pulse" />
 
         <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-4xl font-bold text-green-800 mb-4">Coordenador do Curso</h2>
+          <h2 className="text-4xl font-bold text-green-800 mb-4 font-montserrat">Coordenador do Curso</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro maxime repellat praesentium, cum excepturi, suscipit tenetur, unde sunt ipsam quam rerum animi? Nemo dolorum quia, repellat eveniet eum modi similique!
           </p>
@@ -47,7 +47,7 @@ export default function Home() {
         <div className="hidden md:block w-1 h-full bg-gray-300 rounded-full animate-pulse" />
 
         <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-4xl font-bold text-green-800 mb-4">Professor do Curso</h2>
+          <h2 className="text-4xl font-bold text-green-800 mb-4 font-montserrat">Professor do Curso</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae! Ipsam necessitatibus eaque nisi cumque eos eum deserunt deleniti eligendi hic, quas adipisci, voluptatum sunt quisquam! Eum temporibus consequatur enim.
           </p>
@@ -55,14 +55,14 @@ export default function Home() {
       </main>
 
       <section className="bg-white py-16 px-6 text-center max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold text-green-800 mb-6">Por que escolher DDS?</h2>
+        <h2 className="text-4xl font-bold text-green-800 mb-6 font-montserrat">Por que escolher Edificações</h2>
         <p className="text-lg text-gray-700 leading-relaxed">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, sed ab. Tempora illum omnis nostrum quo, minima minus odio deleniti nam eos animi maxime alias perspiciatis fuga iusto, quae voluptates? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad beatae deserunt sint iusto accusantium doloribus nemo facilis, et modi laborum eveniet. Corporis similique at iste quae eum enim tempora commodi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quaerat numquam sit expedita ipsum ipsa voluptatem facilis a, magni consequuntur incidunt excepturi ducimus reiciendis odio eveniet quae nisi quibusdam aspernatur.
         </p>
       </section>
 
       <section className="bg-green-50 py-16 px-6 max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-green-800 mb-8 text-center">Grade Curso</h2>
+        <h2 className="text-4xl font-bold text-green-800 mb-8 text-center font-montserrat">Grade Curso</h2>
         <table className="w-full border border-green-300 rounded-md overflow-hidden">
           <thead className="bg-green-200">
             <tr>

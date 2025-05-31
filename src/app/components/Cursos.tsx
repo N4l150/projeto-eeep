@@ -28,7 +28,7 @@ export default function Cursos() {
 
   return (
     <div className="p-8">
-      <h1 className="text-4xl font-semibold mb-8 text-center ">
+      <h1 className="text-4xl font-semibold mb-8 text-center font-montserrat">
         Conheça nossos Cursos
       </h1>
       <div className="grid sm:grid-cols-4 gap-5 relative">
@@ -40,7 +40,7 @@ export default function Cursos() {
                        hover:scale-105 hover:shadow-2xl hover:z-10 bg-white"
           >
             <div className="mb-5">{curso.icone}</div>
-            <h2 className="text-xl font-semibold mb-1">{curso.nome}</h2>
+            <h2 className="text-xl font-semibold mb-1 font-montserrat">{curso.nome}</h2>
             <p className="text-sm text-gray-600">Clique para saber mais</p>
           </Link>
         ))}

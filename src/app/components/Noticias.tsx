@@ -48,7 +48,7 @@ function Espacos() {
 
   return (
     <section className="w-full max-w-md mx-auto p-6 bg-white rounded-3xl shadow-xl border border-gray-200">
-      <h2 className="text-3xl font-extrabold text-center mb-6 text-green-700 tracking-tight">
+      <h2 className="text-3xl font-extrabold text-center mb-6 text-green-700 tracking-tight font-montserrat">
         Nossos Espaços
       </h2>
 
@@ -121,7 +121,7 @@ export default function Noticias() {
 
   return (
     <main className="max-w-6xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8 text-center text-green-800">
+      <h1 className="text-4xl font-bold mb-8 text-center text-green-800 font-montserrat">
         Últimas Notícias
       </h1>
 
@@ -141,7 +141,7 @@ export default function Noticias() {
                 <div className="w-1 bg-orange-400 rounded-l-lg mr-3"></div>
                 <div className="flex-1">
                   <header className="mb-1 flex justify-between items-center">
-                    <h2 className="text-lg font-semibold text-green-800">{titulo}</h2>
+                    <h2 className="text-lg font-semibold text-green-800 font-montserrat">{titulo}</h2>
                     <time className="text-xs text-gray-500" dateTime={data}>
                       {new Date(data).toLocaleDateString()}
                     </time>
