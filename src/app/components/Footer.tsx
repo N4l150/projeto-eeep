@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-6">
         <div className="flex-shrink-0">
           <img
-            src="/Escola/sala.jpeg" 
+            src="/images/logo/lbc-logo.jpg" 
             alt="EEEP Lúcia Baltazar Costa"
             className="w-24 h-24 rounded-full object-cover border-2 border-white"
           />

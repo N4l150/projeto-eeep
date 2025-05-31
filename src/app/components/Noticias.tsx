@@ -47,40 +47,50 @@ function Espacos() {
   const slide = slides[currentIndex];
 
   return (
-    <section className="w-full max-w-md p-4 bg-green-100 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold text-center mb-4 text-green-800">
+    <section className="w-full max-w-md mx-auto p-6 bg-white rounded-3xl shadow-xl border border-gray-200">
+      <h2 className="text-3xl font-extrabold text-center mb-6 text-green-700 tracking-tight">
         Nossos Espaços
       </h2>
 
-      <div className="relative rounded-lg overflow-hidden">
+      <div className="relative rounded-2xl overflow-hidden group shadow-md">
         <Image
           src={slide.imagem}
           alt={slide.titulo}
           width={400}
           height={300}
-          className="rounded-md w-full h-auto object-cover"
+          className="w-full h-64 object-cover rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"
           sizes="(max-width: 768px) 100vw, 400px"
         />
 
-        <div className="mt-3 text-center">
-          <h3 className="text-xl font-semibold text-green-900">{slide.titulo}</h3>
-          <p className="text-sm text-gray-700">{slide.descricao}</p>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-70 rounded-2xl" />
+
+        <div className="absolute bottom-4 left-4 right-4 text-white z-10">
+          <h3 className="text-xl font-semibold drop-shadow-md">{slide.titulo}</h3>
+          <p className="text-sm drop-shadow-md">{slide.descricao}</p>
         </div>
 
-        <button
-          onClick={prevSlide}
-          className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-green-700 text-white w-7 h-7 rounded-full hover:bg-green-900"
-        >
-          ‹
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-green-700 text-white w-7 h-7 rounded-full hover:bg-green-900"
-        >
-          ›
-        </button>
+        {/* Botões de navegação */}
+         {/* Botão anterior */}
+          <button
+            onClick={prevSlide}
+            aria-label="Slide anterior"
+            className="absolute top-0 left-0 w-1/4 h-full flex items-center justify-start px-4 text-white text-4xl font-bold hover:text-green-400 transition-all duration-300 z-20"
+          >
+            ‹
+          </button>
+
+          {/* Botão próximo */}
+          <button
+            onClick={nextSlide}
+            aria-label="Próximo slide"
+            className="absolute top-0 right-0 w-1/4 h-full flex items-center justify-end px-4 text-white text-4xl font-bold hover:text-green-400 transition-all duration-300 z-20"
+          >
+            ›
+          </button>
       </div>
     </section>
+
+
   );
 }
 
@@ -136,7 +146,7 @@ export default function Noticias() {
                       {new Date(data).toLocaleDateString()}
                     </time>
                   </header>
-                  <p className="text-gray-700 text-sm">{resumo}</p>
+                  <p className="text-gray-700 text-sm hover:text-green-800 hover:font-semibold transition">{resumo}</p>
                 </div>
               </div>
             </article>

@@ -16,7 +16,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <div className="relative w-16 h-16 rounded-full overflow-hidden">
             <Image
-              src="/Escola/sala.jpeg" 
+              src="/images/logo/lbc-logo.jpg" 
               alt="Logo da Escola"
               fill
               style={{ objectFit: 'cover' }}

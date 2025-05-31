@@ -28,7 +28,7 @@ export default function Cursos() {
 
   return (
     <div className="p-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">
+      <h1 className="text-4xl font-semibold mb-8 text-center ">
         Conheça nossos Cursos
       </h1>
       <div className="grid sm:grid-cols-4 gap-5 relative">
