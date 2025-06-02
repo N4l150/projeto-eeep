@@ -17,20 +17,20 @@ export default function Footer() {
         </div>
 
         <div className="flex-1 text-center md:text-left">
-          <h3 className="text-lg font-semibold mb-2">Perguntas Frequentes</h3>
+          <h3 className="text-lg font-semibold mb-2">F&Q</h3>
           <ul className="space-y-1">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/faq" className="hover:underline">
                 Como me matricular?
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/faq" className="hover:underline">
                 Como funcionam os cursos?
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/faq" className="hover:underline">
                 Como entrar em contato com a secretaria?
               </a>
             </li>

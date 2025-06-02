@@ -25,9 +25,9 @@ export default function Team() {
   useEffect(() => {
     const updateVisibleCount = () => {
       const width = window.innerWidth;
-      if (width < 640) setVisibleCount(1); // mobile
-      else if (width < 1024) setVisibleCount(2); // tablet
-      else setVisibleCount(3); // desktop
+      if (width < 640) setVisibleCount(1);
+      else if (width < 1024) setVisibleCount(2);
+      else setVisibleCount(3);
     };
 
     updateVisibleCount();
@@ -61,7 +61,7 @@ export default function Team() {
       <div className="relative max-w-7xl mx-auto flex gap-4 justify-center items-center px-8">
         <button
           onClick={prevSlide}
-          className="absolute top-0 left-0 w-1/4 h-full flex items-center justify-start px-4 text-green-800 text-4xl font-bold hover:text-green-500 transition-all duration-300 z-20"
+          className="absolute top-0 left-0 w-1/4 h-full flex items-center justify-start px-4 text-green-800 text-4xl font-bold hover:text-gray-400 transition-all duration-300 z-20"
           aria-label="Anterior"
         >
           ‹
@@ -70,10 +70,10 @@ export default function Team() {
         {visibleTeam.map((member, i) => (
           <div
             key={i}
-            className="bg-white border-4 border-green-700 p-6 rounded-2xl shadow-xl w-72 transition-all hover:scale-105 hover:z-10"
+            className="bg-white border-l-4 border-orange-500 p-6 rounded-xl shadow-md w-72 transition-all hover:scale-105 hover:z-10"
           >
             <div className="flex flex-col items-center">
-              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden border-4 border-green-300">
+              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden border-4 border-green-800">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -92,7 +92,7 @@ export default function Team() {
 
         <button
           onClick={nextSlide}
-          className="absolute top-0 right-0 w-1/4 h-full flex items-center justify-end px-4 text-green-800 text-4xl font-bold hover:text-green-500 transition-all duration-300 z-20"
+          className="absolute top-0 right-0 w-1/4 h-full flex items-center justify-end px-4 text-green-700 text-4xl font-bold hover:text-gray-400 transition-all duration-300 z-20"
           aria-label="Próximo"
         >
           ›

@@ -1,6 +1,8 @@
 'use client';
-import { useState } from "react";
-import Image from "next/image";
+
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';  
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(true);
@@ -16,7 +18,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <div className="relative w-16 h-16 rounded-full overflow-hidden">
             <Image
-              src="/images/logo/lbc-logo.jpg" 
+              src="/images/logo/lbc-logo.jpg"
               alt="Logo da Escola"
               fill
               style={{ objectFit: 'cover' }}
@@ -38,13 +40,25 @@ export default function Header() {
 
         {menuAberto && (
           <nav className="flex flex-wrap gap-5 text-base mt-4 sm:mt-0">
-            <a href="#" className="hover:underline hover:underline-offset-4"> F&Q</a>
-            <a href="#" className="hover:underline hover:underline-offset-4">Cursos</a>
-            <a href="#" className="hover:underline hover:underline-offset-4">Equipe</a>
-            <a href="#" className="hover:underline hover:underline-offset-4">Quem somos</a>
-            <a href="#" className="hover:underline hover:underline-offset-4">Contato</a>
-             <a href="#" className="hover:underline hover:underline-offset-4">Cnpj:</a>
-
+            
+            <Link href="/FAQ" className="hover:underline hover:underline-offset-4">
+              FAQ
+            </Link>
+            <Link href="/cursos" className="hover:underline hover:underline-offset-4">
+              Cursos
+            </Link>
+            <Link href="/equipe" className="hover:underline hover:underline-offset-4">
+              Equipe
+            </Link>
+            <Link href="/quem-somos" className="hover:underline hover:underline-offset-4">
+              Quem somos
+            </Link>
+            <Link href="/contato" className="hover:underline hover:underline-offset-4">
+              Contato
+            </Link>
+            <Link href="/cnpj" className="hover:underline hover:underline-offset-4">
+              CNPJ:
+            </Link>
           </nav>
         )}
       </div>
@@ -55,12 +69,16 @@ export default function Header() {
         <a
           href="https://aluno.seduc.ce.gov.br/"
           className="inline-block bg-green-800 text-white px-4 py-2 rounded-full hover:bg-orange-400 transition mr-4"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Aluno Online
         </a>
         <a
           href="https://professor.seduc.ce.gov.br/"
           className="inline-block bg-green-800 text-white px-4 py-2 rounded-full hover:bg-orange-400 transition"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Professor Online
         </a>

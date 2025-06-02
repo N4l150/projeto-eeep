@@ -141,7 +141,7 @@ export default function Noticias() {
                 <div className="w-1 bg-orange-400 rounded-l-lg mr-3"></div>
                 <div className="flex-1">
                   <header className="mb-1 flex justify-between items-center">
-                    <h2 className="text-lg font-semibold text-green-800 font-montserrat">{titulo}</h2>
+                    <h2 className="text-lg font-semibold text-green-80 font-montserrat">{titulo}</h2>
                     <time className="text-xs text-gray-500" dateTime={data}>
                       {new Date(data).toLocaleDateString()}
                     </time>
