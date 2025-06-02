@@ -11,7 +11,7 @@ export default function Cursos() {
     },
     {
       id: "dds",
-      nome: "Desenvolvimento de Sistemas",
+      nome: "Desenv. de Sistemas",
       icone: <Code size={72} className="text-purple-800 mx-auto" />,
     },
     {

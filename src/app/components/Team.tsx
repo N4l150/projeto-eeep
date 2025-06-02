@@ -20,22 +20,37 @@ const team: TeamMember[] = [
 
 export default function Team() {
   const [index, setIndex] = useState(0);
-  const visibleCount = 3;
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      const width = window.innerWidth;
+      if (width < 640) setVisibleCount(1); // mobile
+      else if (width < 1024) setVisibleCount(2); // tablet
+      else setVisibleCount(3); // desktop
+    };
+
+    updateVisibleCount();
+    window.addEventListener('resize', updateVisibleCount);
+    return () => window.removeEventListener('resize', updateVisibleCount);
+  }, []);
 
   const nextSlide = () => {
-    setIndex((prev) => (prev + visibleCount) % team.length);
+    setIndex((prev) => (prev + 1) % (team.length - visibleCount + 1));
   };
 
   const prevSlide = () => {
-    setIndex((prev) => (prev - visibleCount + team.length) % team.length);
+    setIndex((prev) =>
+      prev === 0 ? team.length - visibleCount : prev - 1
+    );
   };
 
   useEffect(() => {
     const interval = setInterval(nextSlide, 6000);
     return () => clearInterval(interval);
-  }, []);
+  }, [index, visibleCount]);
 
-  const visibleTeam = [...team, ...team].slice(index, index + visibleCount);
+  const visibleTeam = team.slice(index, index + visibleCount);
 
   return (
     <section className="bg-white py-12 px-4 relative">
@@ -43,31 +58,22 @@ export default function Team() {
         Nossa Equipe
       </h3>
 
-      <div className="max-w-6xl mx-auto px-4 relative">
-        {/* Botões nas laterais */}
+      <div className="relative max-w-7xl mx-auto flex gap-4 justify-center items-center px-8">
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 text-4xl text-green-800 hover:text-green-500 px-4 z-20"
+          className="absolute top-0 left-0 w-1/4 h-full flex items-center justify-start px-4 text-green-800 text-4xl font-bold hover:text-green-500 transition-all duration-300 z-20"
           aria-label="Anterior"
         >
           ‹
         </button>
-        <button
-          onClick={nextSlide}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 text-4xl text-green-800 hover:text-green-500 px-4 z-20"
-          aria-label="Próximo"
-        >
-          ›
-        </button>
 
-        {/* Grade de cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-          {visibleTeam.map((member, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl shadow-md border-l-4 border-orange-400 p-5 transition hover:shadow-lg"
-            >
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-300">
+        {visibleTeam.map((member, i) => (
+          <div
+            key={i}
+            className="bg-white border-4 border-green-700 p-6 rounded-2xl shadow-xl w-72 transition-all hover:scale-105 hover:z-10"
+          >
+            <div className="flex flex-col items-center">
+              <div className="w-24 h-24 mb-4 rounded-full overflow-hidden border-4 border-green-300">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -76,14 +82,24 @@ export default function Team() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <h4 className="text-lg font-bold text-green-800 text-center font-montserrat">
+              <h4 className="text-xl font-bold text-green-800 text-center font-montserrat">
                 {member.name}
               </h4>
               <p className="text-sm text-gray-700 text-center">{member.role}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+
+        <button
+          onClick={nextSlide}
+          className="absolute top-0 right-0 w-1/4 h-full flex items-center justify-end px-4 text-green-800 text-4xl font-bold hover:text-green-500 transition-all duration-300 z-20"
+          aria-label="Próximo"
+        >
+          ›
+        </button>
       </div>
+
+      <div className="h-1 bg-orange-400 w-full my-8" />
     </section>
   );
 }
