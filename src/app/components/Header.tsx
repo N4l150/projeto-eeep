@@ -11,8 +11,8 @@ export default function Header() {
 
   return (
     <header>
-      <div className="flex flex-col sm:flex-row items-center justify-between px-6 py-6 bg-green-900 text-white">
-       
+      <div className="flex flex-col sm:flex-row items-center justify-between px-6 py-6 bg-gradient-to-tl from-green-900 to-green-600 text-white">
+
         <div className="flex items-center gap-4">
           <div className="relative w-16 h-16 rounded-full overflow-hidden">
             <Image

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 export default function Footer() {
   return (
-    <footer className="w-full bg-green-800 text-white py-8 px-4">
+    <footer className="w-full bg-gradient-to-br from-green-900 to-green-600 text-white py-8 px-4">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-6">
         <div className="flex-shrink-0">
           <img

@@ -66,7 +66,7 @@ export default function Carrossel() {
 
           <button
             onClick={prevSlide}
-            className="absolute -left-6 top-1/2 -translate-y-1/2 bg-green-900 text-white w-10 h-10 rounded-full hover:bg-green-700 z-10"
+            className="absolute top-0 left-0 w-1/4 h-full flex items-center justify-start px-4 text-white text-4xl font-bold hover:text-gray-300 transition-all duration-300 z-20"
           >
             ‹
           </button>
@@ -95,7 +95,7 @@ export default function Carrossel() {
          
           <button
             onClick={nextSlide}
-            className="absolute -right-6 top-1/2 -translate-y-1/2 bg-green-900 text-white w-10 h-10 rounded-full hover:bg-green-700 z-10"
+            className="absolute top-0 right-0 w-1/4 h-full flex items-center justify-end px-4 text-white text-4xl font-bold hover:text-gray-300 transition-all duration-300 z-20"
           >
             ›
           </button>
