@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { Code, Briefcase, Building, HeartPulse } from 'lucide-react';
 import Link from "next/link";
 
@@ -27,11 +27,12 @@ export default function Cursos() {
   ];
 
   return (
-    <div className="p-8">
-      <h1 className="text-4xl font-semibold mb-8 text-center font-montserrat">
+    <section id="cursos" className="bg-gray-50 py-16 px-6">
+      <h1 className="text-4xl font-semibold mb-8 text-center font-montserrat text-green-800">
         Conheça nossos Cursos
       </h1>
-      <div className="grid sm:grid-cols-4 gap-5 relative">
+
+      <div className="grid sm:grid-cols-4 gap-5 max-w-6xl mx-auto">
         {cursos.map((curso) => (
           <Link
             key={curso.id}
@@ -45,9 +46,8 @@ export default function Cursos() {
           </Link>
         ))}
       </div>
-           <div className="h-1 bg-orange-400 mt-4 w-full" />
 
-    </div>
-    
+      <div className="h-1 bg-orange-400 mt-8 w-full" />
+    </section>
   );
 }

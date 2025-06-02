@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+
+/* ngcin pra rolar suave */
+html {
+  scroll-behavior: smooth;
+}
+
 .font-montserrat {
   font-family: var(--font-montserrat);
 }

@@ -53,7 +53,7 @@ export default function Team() {
   const visibleTeam = team.slice(index, index + visibleCount);
 
   return (
-    <section className="bg-white py-12 px-4 relative">
+    <section id='equipe' className="bg-white py-12 px-4 relative">
       <h3 className="text-3xl font-extrabold text-center text-green-800 mb-10 font-montserrat">
         Nossa Equipe
       </h3>

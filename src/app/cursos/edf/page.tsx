@@ -1,8 +1,6 @@
-'use client';
-
+import Image from "next/image";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,56 +11,16 @@ export default function Home() {
         <h1 className="text-5xl font-bold text-green-900 font-montserrat">Edificações</h1>
       </section>
 
-      <main className="flex flex-col md:flex-row items-center justify-center min-h-[80vh] px-6 py-16 bg-green-100 gap-10">
-        <div className="relative w-full md:w-1/2 lg:w-1/3 h-80 md:h-[400px] rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
-          <Image
-            src="/images/adriano.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div className="hidden md:block w-1 h-full bg-orange-400 rounded-full animate-pulse" />
-
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-4xl font-bold text-green-800 mb-4 font-montserrat">Coordenador do Curso</h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro maxime repellat praesentium, cum excepturi, suscipit tenetur, unde sunt ipsam quam rerum animi? Nemo dolorum quia, repellat eveniet eum modi similique!
-          </p>
-        </div>
-      </main>
-
-      <main className="flex flex-col md:flex-row-reverse items-center justify-center min-h-[80vh] px-6 py-16 bg-orange-100 gap-10">
-        <div className="relative w-full md:w-1/2 lg:w-1/3 h-80 md:h-[400px] rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
-          <Image
-            src="/images/Baggio.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-
-        <div className="hidden md:block w-1 h-full bg-gray-300 rounded-full animate-pulse" />
-
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-4xl font-bold text-green-800 mb-4 font-montserrat">Professor do Curso</h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae! Ipsam necessitatibus eaque nisi cumque eos eum deserunt deleniti eligendi hic, quas adipisci, voluptatum sunt quisquam! Eum temporibus consequatur enim.
-          </p>
-        </div>
-      </main>
-
       <section className="bg-white py-16 px-6 text-center max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold text-green-800 mb-6 font-montserrat">Por que escolher Edificações</h2>
+        <h2 className="text-4xl font-bold text-green-800 mb-6 font-montserrat">Por que escolher Edificações?</h2>
         <p className="text-lg text-gray-700 leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, sed ab. Tempora illum omnis nostrum quo, minima minus odio deleniti nam eos animi maxime alias perspiciatis fuga iusto, quae voluptates? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad beatae deserunt sint iusto accusantium doloribus nemo facilis, et modi laborum eveniet. Corporis similique at iste quae eum enim tempora commodi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quaerat numquam sit expedita ipsum ipsa voluptatem facilis a, magni consequuntur incidunt excepturi ducimus reiciendis odio eveniet quae nisi quibusdam aspernatur.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt dolore cupiditate provident accusamus distinctio quis quod, ipsam quae magnam, enim delectus repudiandae similique vitae dolor debitis exercitationem quo et deleniti!
         </p>
       </section>
 
+      {/* Grade */}
       <section className="bg-green-50 py-16 px-6 max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-green-800 mb-8 text-center font-montserrat">Grade Curso</h2>
+        <h2 className="text-4xl font-bold text-green-800 mb-8 text-center font-montserrat">Grade do Curso</h2>
         <table className="w-full border border-green-300 rounded-md overflow-hidden">
           <thead className="bg-green-200">
             <tr>
@@ -94,6 +52,47 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
+      </section>
+
+
+      <section className="max-w-6xl mx-auto px-6 py-16 space-y-16">
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          <div className="w-40 h-40 relative rounded-full overflow-hidden border-2 border-green-800">
+            <Image
+              src="/images/aiko.png"
+              alt="Coordenador do Curso"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+           {/* coordenador */}
+          <div className="text-center md:text-left">
+            <h3 className="text-2xl font-semibold text-green-800 font-montserrat">Coordenador do Curso</h3>
+            <p className="mt-2 text-gray-700 text-base max-w-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsam aliquid optio consequatur illum neque recusandae reiciendis accusamus ut hic. Fugit mollitia ut velit delectus eveniet eos quia possimus ullam.
+            </p>
+          </div>
+        </div>
+
+        {/* Professor */}
+        <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+          <div className="w-40 h-40 relative rounded-full overflow-hidden border-2 border-green-800">
+            <Image
+              src="/images/Nalyson.png"
+              alt="Professor do Curso"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="text-center md:text-left">
+            <h3 className="text-2xl font-semibold text-green-800 font-montserrat">Professor do Curso</h3>
+            <p className="mt-2 text-gray-700 text-base max-w-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos nam repudiandae deserunt enim inventore fugiat ex deleniti quod, cupiditate similique laboriosam libero adipisci, in eligendi error nisi! Necessitatibus, aliquid!
+            </p>
+          </div>
+        </div>
       </section>
 
       <Footer />

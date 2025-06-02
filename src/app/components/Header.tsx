@@ -44,18 +44,18 @@ export default function Header() {
             <Link href="/FAQ" className="hover:underline hover:underline-offset-4">
               FAQ
             </Link>
-            <Link href="/cursos" className="hover:underline hover:underline-offset-4">
+              <a href="#cursos" className="hover:underline hover:underline-offset-4">
               Cursos
-            </Link>
-            <Link href="/equipe" className="hover:underline hover:underline-offset-4">
+            </a>
+            <a href="#equipe" className="hover:underline hover:underline-offset-4">
               Equipe
-            </Link>
+            </a>
             <Link href="/quem-somos" className="hover:underline hover:underline-offset-4">
               Quem somos
             </Link>
-            <Link href="/contato" className="hover:underline hover:underline-offset-4">
+            <a href="#contato" className="hover:underline hover:underline-offset-4">
               Contato
-            </Link>
+            </a>
             <Link href="/cnpj" className="hover:underline hover:underline-offset-4">
               CNPJ:
             </Link>
