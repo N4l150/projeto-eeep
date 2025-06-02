@@ -17,7 +17,7 @@ export default function Home() {
         <div className="relative flex-shrink-0 w-1/3 h-full">
           <Image
             src="/images/teste.png"
-            alt="Massoterapia 1"
+            alt=""
             fill
             className="object-cover"
             priority
@@ -26,7 +26,7 @@ export default function Home() {
         <div className="relative flex-shrink-0 w-1/3 h-full">
           <Image
             src="/images/teste.png"
-            alt="Massoterapia 2"
+            alt=""
             fill
             className="object-cover"
             priority
@@ -35,7 +35,7 @@ export default function Home() {
         <div className="relative flex-shrink-0 w-1/3 h-full">
           <Image
             src="/images/teste.png"
-            alt="Massoterapia 3"
+            alt=""
             fill
             className="object-cover"
             priority
@@ -87,46 +87,51 @@ export default function Home() {
         </table>
       </section>
 
-      {/* Professores */}
-      <section className="max-w-6xl mx-auto px-6 py-16 space-y-16">
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="w-40 h-40 relative rounded-full overflow-hidden border-2 border-green-800">
-            <Image
-              src="/images/aiko.png"
-              alt="Coordenador do Curso"
-              fill
-              className="object-cover"
-              priority
-            />
+        {/* Professores */}
+        <section className="max-w-6xl mx-auto px-6 py-16 space-y-16">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="w-40 h-40 relative rounded-full overflow-hidden border-2 border-green-800">
+              <Image
+                src="/images/aiko.png"
+                alt="Coordenador do Curso"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            
+            {/* coordenador */}
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-semibold text-green-800 font-montserrat">Coordenador do Curso</h3>
+              <p className="mt-2 text-gray-700 text-base max-w-lg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsam aliquid optio consequatur illum neque recusandae reiciendis accusamus ut hic. Fugit mollitia ut velit delectus eveniet eos quia possimus ullam.
+              </p>
+            </div>
           </div>
-          {/* coordenador */}
-          <div className="text-center md:text-left">
-            <h3 className="text-2xl font-semibold text-green-800 font-montserrat">Coordenador do Curso</h3>
-            <p className="mt-2 text-gray-700 text-base max-w-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsam aliquid optio consequatur illum neque recusandae reiciendis accusamus ut hic. Fugit mollitia ut velit delectus eveniet eos quia possimus ullam.
-            </p>
-          </div>
-        </div>
 
-        {/* Professor */}
-        <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-          <div className="w-40 h-40 relative rounded-full overflow-hidden border-2 border-green-800">
-            <Image
-              src="/images/Nalyson.png"
-              alt="Professor do Curso"
-              fill
-              className="object-cover"
-              priority
-            />
+          {/* Linha separando  */}
+          <hr className="border-t-3 border-orange-500 w-full" />
+
+          {/* Professor */}
+          <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+            <div className="w-40 h-40 relative rounded-full overflow-hidden border-2 border-green-800">
+              <Image
+                src="/images/Nalyson.png"
+                alt="Professor do Curso"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-semibold text-green-800 font-montserrat">Professor do Curso</h3>
+              <p className="mt-2 text-gray-700 text-base max-w-lg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos nam repudiandae deserunt enim inventore fugiat ex deleniti quod, cupiditate similique laboriosam libero adipisci, in eligendi error nisi! Necessitatibus, aliquid!
+              </p>
+            </div>
           </div>
-          <div className="text-center md:text-left">
-            <h3 className="text-2xl font-semibold text-green-800 font-montserrat">Professor do Curso</h3>
-            <p className="mt-2 text-gray-700 text-base max-w-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos nam repudiandae deserunt enim inventore fugiat ex deleniti quod, cupiditate similique laboriosam libero adipisci, in eligendi error nisi! Necessitatibus, aliquid!
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
+
 
       <Footer />
     </>

@@ -47,6 +47,7 @@ export default function Header() {
               <a href="#cursos" className="hover:underline hover:underline-offset-4">
               Cursos
             </a>
+
             <a href="#equipe" className="hover:underline hover:underline-offset-4">
               Equipe
             </a>
