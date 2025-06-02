@@ -7,10 +7,43 @@ export default function Home() {
     <>
       <Header />
 
+
       <section className="bg-white py-12 text-center max-w-5xl mx-auto">
         <h1 className="text-5xl font-bold text-green-900 font-montserrat">Des. de Sistemas</h1>
       </section>
 
+      {/* Faixa com imagens */}
+      <section className="w-full h-[20vh] flex overflow-x-auto no-scrollbar">
+        <div className="relative flex-shrink-0 w-1/3 h-full">
+          <Image
+            src="/images/teste.png"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="relative flex-shrink-0 w-1/3 h-full">
+          <Image
+            src="/images/teste.png"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="relative flex-shrink-0 w-1/3 h-full">
+          <Image
+            src="/images/teste.png"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </section>
+
+   
       <section className="bg-white py-16 px-6 text-center max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold text-green-800 mb-6 font-montserrat">Por que escolher Des. de Sistemas?</h2>
         <p className="text-lg text-gray-700 leading-relaxed">
@@ -54,7 +87,7 @@ export default function Home() {
         </table>
       </section>
 
-
+      {/* Professores */}
       <section className="max-w-6xl mx-auto px-6 py-16 space-y-16">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-40 h-40 relative rounded-full overflow-hidden border-2 border-green-800">
@@ -66,7 +99,7 @@ export default function Home() {
               priority
             />
           </div>
-           {/* coordenador */}
+          {/* coordenador */}
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-semibold text-green-800 font-montserrat">Coordenador do Curso</h3>
             <p className="mt-2 text-gray-700 text-base max-w-lg">
