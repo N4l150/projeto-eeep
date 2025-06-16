@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation'; 
 
 type TeamMember = {
   name: string;
@@ -21,6 +22,7 @@ const team: TeamMember[] = [
 export default function Team() {
   const [index, setIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
+  const router = useRouter(); 
 
   useEffect(() => {
     const updateVisibleCount = () => {
@@ -40,9 +42,7 @@ export default function Team() {
   };
 
   const prevSlide = () => {
-    setIndex((prev) =>
-      prev === 0 ? team.length - visibleCount : prev - 1
-    );
+    setIndex((prev) => (prev === 0 ? team.length - visibleCount : prev - 1));
   };
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function Team() {
   const visibleTeam = team.slice(index, index + visibleCount);
 
   return (
-    <section id='equipe' className="bg-white py-12 px-4 relative">
+    <section id="equipe" className="bg-white py-12 px-4 relative">
       <h3 className="text-3xl font-extrabold text-center text-green-800 mb-10 font-montserrat">
         Nossa Equipe
       </h3>
@@ -100,6 +100,22 @@ export default function Team() {
       </div>
 
       <div className="h-1 bg-orange-400 w-full my-8" />
+
+      <div className="flex justify-between mt-4 px-4">
+        <button
+          onClick={() => router.push('/dev-team')}
+          className="bg-green-700 text-white px-6 py-2 rounded-full shadow hover:bg-green-800 transition-all font-semibold"
+        >
+          Dev-Team
+        </button>
+
+        <button
+          onClick={() => window.open('https://www.linkedin.com', '_blank')}
+          className="bg-green-700 text-white px-6 py-2 rounded-full shadow hover:bg-green-800 transition-all font-semibold"
+        >
+          Alguma coisa ai
+        </button>
+      </div>
     </section>
   );
 }
