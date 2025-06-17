@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation'; 
+import Link from 'next/link';
 
 type TeamMember = {
   name: string;
@@ -22,15 +22,14 @@ const team: TeamMember[] = [
 export default function Team() {
   const [index, setIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
-  const router = useRouter(); 
 
   useEffect(() => {
-    const updateVisibleCount = () => {
+    function updateVisibleCount() {
       const width = window.innerWidth;
       if (width < 640) setVisibleCount(1);
       else if (width < 1024) setVisibleCount(2);
       else setVisibleCount(3);
-    };
+    }
 
     updateVisibleCount();
     window.addEventListener('resize', updateVisibleCount);
@@ -67,9 +66,9 @@ export default function Team() {
           ‹
         </button>
 
-        {visibleTeam.map((member, i) => (
+        {visibleTeam.map((member) => (
           <div
-            key={i}
+            key={member.name}
             className="bg-white border-l-4 border-orange-500 p-6 rounded-xl shadow-md w-72 transition-all hover:scale-105 hover:z-10"
           >
             <div className="flex flex-col items-center">
@@ -101,20 +100,25 @@ export default function Team() {
 
       <div className="h-1 bg-orange-400 w-full my-8" />
 
-      <div className="flex justify-between mt-4 px-4">
-        <button
-          onClick={() => router.push('/dev-team')}
-          className="bg-green-700 text-white px-6 py-2 rounded-full shadow hover:bg-green-800 transition-all font-semibold"
-        >
-          Dev-Team
-        </button>
+      <div className="bg-gray-100 py-6 mt-8 px-4 rounded-xl shadow-inner">
+        <h2 className="text-xl sm:text-2xl font-bold text-green-800 text-center mb-4 font-montserrat">
+          Acesse também
+        </h2>
 
-        <button
-          onClick={() => window.open('https://www.linkedin.com', '_blank')}
-          className="bg-green-700 text-white px-6 py-2 rounded-full shadow hover:bg-green-800 transition-all font-semibold"
-        >
-          Alguma coisa ai
-        </button>
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <Link href="/devTeam">
+            <button className="bg-green-700 text-white px-6 py-2 rounded-full shadow hover:bg-green-800 transition-all font-semibold">
+              Dev-Team
+            </button>
+          </Link>
+
+          <button
+            onClick={() => window.open('https://www.linkedin.com', '_blank')}
+            className="bg-green-700 text-white px-6 py-2 rounded-full shadow hover:bg-green-800 transition-all font-semibold"
+          >
+            LinkedIn
+          </button>
+        </div>
       </div>
     </section>
   );

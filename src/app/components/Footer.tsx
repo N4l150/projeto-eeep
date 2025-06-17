@@ -17,7 +17,38 @@ export default function Footer() {
           <p>Contato: (11) 1111-1111 | luciabaltazar@gmail.com</p>
         </div>
 
-        {/* Redes Sociais */}
+        <div className="flex-1 text-center md:text-left">
+          <h3 className="text-lg font-semibold mb-2">Links</h3>
+          <ul className="space-y-1">
+            <li>
+              <a
+                href="/ambientes-escolares"
+                className="hover:underline transition-colors"
+              >
+                Ambientes Escolares
+              </a>
+            </li>
+            <li>
+              <a
+                href="/historia-da-escola"
+                className="hover:underline transition-colors"
+              >
+                História da Escola
+              </a>
+            </li>
+            <li>
+              <a
+                href="/grupo-gestor"
+                className="hover:underline transition-colors"
+              >
+                Grupo Gestor
+              </a>
+            </li>
+            <li>
+            </li>
+          </ul>
+        </div>
+
         <div className="flex-1 text-center md:text-left">
           <h3 className="text-lg font-semibold mb-2">Redes Sociais</h3>
           <div className="flex justify-center md:justify-start gap-4">
@@ -32,11 +63,9 @@ export default function Footer() {
                 src="/icons/instagram.svg"
                 alt="Instagram"
                 className="w-8 h-8 filter invert hover:invert-0 hover:brightness-0 hover:sepia hover:hue-rotate-[30deg] hover:saturate-[10]"
-
               />
             </a>
 
-           
             <a
               href="https://facebook.com/"
               target="_blank"
@@ -50,7 +79,6 @@ export default function Footer() {
               />
             </a>
 
-            
             <a
               href="https://youtube.com/"
               target="_blank"
